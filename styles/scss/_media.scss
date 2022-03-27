@@ -1,0 +1,61 @@
+/** @format */
+@media screen and (max-width: 768px) {
+	form {
+		width: 90%;
+		padding: 0 1rem;
+	}
+	table {
+		margin: 1rem 0.5rem;
+		thead {
+			tr {
+				position: absolute;
+				top: -9999px;
+				left: -9999px;
+			}
+		}
+		tr {
+			&:nth-child(odd) {
+				background-color: $header-table-color;
+			}
+		}
+		td {
+			display: block;
+			height: 40px;
+			border: none !important;
+			border-bottom: 1px solid #eee !important;
+			position: relative;
+			padding-left: 50% !important;
+			&:before {
+				line-height: 40px;
+				position: absolute;
+				border-right: 1px solid #ccc;
+				top: 0;
+				left: 6px;
+				width: 45%;
+				margin-right: 10px;
+				white-space: nowrap;
+			}
+			&:nth-of-type(1)::before {
+				content: "STT";
+			}
+			&:nth-of-type(2)::before {
+				content: "Họ Tên";
+			}
+			&:nth-of-type(3)::before {
+				content: "Toán";
+			}
+			&:nth-of-type(4)::before {
+				content: "Lý";
+			}
+			&:nth-of-type(5)::before {
+				content: "Hoá";
+			}
+			&:nth-of-type(6)::before {
+				content: "Trung Bình";
+			}
+		}
+	}
+	.calc {
+		margin-bottom: 1rem;
+	}
+}

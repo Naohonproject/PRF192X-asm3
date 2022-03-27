@@ -1,0 +1,65 @@
+/** @format */
+@import "config", "variable", "media";
+
+body {
+	min-width: 300px;
+	h1 {
+		text-align: center;
+		margin-top: 1rem;
+	}
+	form {
+		width: 300px;
+		margin: 2rem auto;
+		div {
+			padding: 4px;
+			margin: 8px 0;
+			input {
+				float: right;
+			}
+		}
+		button {
+			width: 64px;
+			height: 24px;
+			background-color: $btn-color;
+			border: 1px solid $border-color;
+			border-radius: 12px;
+			margin-top: 24px;
+			margin-bottom: 50px;
+			position: relative;
+			left: calc(50% - 32px);
+		}
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		margin: 2rem auto;
+		width: 90%;
+		tr {
+			th {
+				background-color: #f3f3f3;
+			}
+			> * {
+				border: 1px solid #ccc;
+				padding: 10px;
+				text-align: center;
+			}
+		}
+	}
+
+	.calc {
+		display: flex;
+		justify-content: center;
+		button {
+			width: 200px;
+			height: 32px;
+			margin: 8px;
+			background: #64c4af;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			&:hover {
+				animation: 8s shake infinite;
+				background: red;
+			}
+		}
+	}
+}

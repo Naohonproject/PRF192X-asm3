@@ -1,0 +1,62 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="./scripts/main.js"></script>
+		<link rel="stylesheet" href="./styles/css/main.css" />
+		<style>
+			.warning {
+				outline: 3px solid red;
+			}
+			.great {
+				color: red;
+			}
+		</style>
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Class Marksheet</h1>
+		<form action="#">
+			<div class="input-field">
+				<label for="ho-ten">Họ Tên: </label>
+				<input id="ho-ten" name="ho-ten" type="text" />
+			</div>
+			<div class="input-field">
+				<label for="diem-toan">Điểm Toán: </label>
+				<input id="diem-toan" name="diem-toan" type="text" />
+			</div>
+			<div class="input-field">
+				<label for="diem-ly">Điểm Lý: </label>
+				<input id="diem-ly" name="diem-ly" type="text" />
+			</div>
+			<div class="input-field">
+				<label for="diem-hoa">Điểm Hoá: </label>
+				<input id="diem-hoa" name="diem-hoa" type="text" />
+			</div>
+			<button type="button" id="input-btn">Nhập</button>
+		</form>
+
+		<table id="score-table">
+			<thead>
+				<tr>
+					<th>STT</th>
+					<th>Họ Tên</th>
+					<th>Toán</th>
+					<th>Lý</th>
+					<th>Hoá</th>
+					<th>Trung Bình</th>
+				</tr>
+			</thead>
+			<tbody id="first-body"></tbody>
+		</table>
+
+		<div class="calc">
+			<button id="average-btn">Tính Điểm Trung Bình</button>
+			<button id="excel-btn">Xác Định học sinh giỏi</button>
+		</div>
+	</body>
+</html>

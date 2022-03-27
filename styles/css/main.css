@@ -1,0 +1,243 @@
+/** @format */
+
+@charset "UTF-8";
+/** @format */
+/** @format */
+*,
+::before,
+::after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+@-webkit-keyframes shake {
+	0% {
+		-webkit-transform: translate(1px, 1px) rotate(0deg);
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		-webkit-transform: translate(-1px, -2px) rotate(-1deg);
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		-webkit-transform: translate(-3px, 0px) rotate(1deg);
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		-webkit-transform: translate(3px, 2px) rotate(0deg);
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+	40% {
+		-webkit-transform: translate(1px, -1px) rotate(1deg);
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		-webkit-transform: translate(-1px, 2px) rotate(-1deg);
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		-webkit-transform: translate(-3px, 1px) rotate(0deg);
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		-webkit-transform: translate(3px, 1px) rotate(-1deg);
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+	80% {
+		-webkit-transform: translate(-1px, -1px) rotate(1deg);
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		-webkit-transform: translate(1px, 2px) rotate(0deg);
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translate(1px, -2px) rotate(-1deg);
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+
+@keyframes shake {
+	0% {
+		-webkit-transform: translate(1px, 1px) rotate(0deg);
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		-webkit-transform: translate(-1px, -2px) rotate(-1deg);
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		-webkit-transform: translate(-3px, 0px) rotate(1deg);
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		-webkit-transform: translate(3px, 2px) rotate(0deg);
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+	40% {
+		-webkit-transform: translate(1px, -1px) rotate(1deg);
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		-webkit-transform: translate(-1px, 2px) rotate(-1deg);
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		-webkit-transform: translate(-3px, 1px) rotate(0deg);
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		-webkit-transform: translate(3px, 1px) rotate(-1deg);
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+	80% {
+		-webkit-transform: translate(-1px, -1px) rotate(1deg);
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		-webkit-transform: translate(1px, 2px) rotate(0deg);
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translate(1px, -2px) rotate(-1deg);
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+
+/** @format */
+/** @format */
+@media screen and (max-width: 768px) {
+	form {
+		width: 90%;
+		padding: 0 1rem;
+	}
+	table {
+		margin: 1rem 0.5rem;
+	}
+	table thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table tr:nth-child(odd) {
+		background-color: #cccc;
+	}
+	table td {
+		display: block;
+		height: 40px;
+		border: none !important;
+		border-bottom: 1px solid #eee !important;
+		position: relative;
+		padding-left: 50% !important;
+	}
+	table td:before {
+		line-height: 40px;
+		position: absolute;
+		border-right: 1px solid #ccc;
+		top: 0;
+		left: 6px;
+		width: 45%;
+		margin-right: 10px;
+		white-space: nowrap;
+	}
+	table td:nth-of-type(1)::before {
+		content: "STT";
+	}
+	table td:nth-of-type(2)::before {
+		content: "Họ Tên";
+	}
+	table td:nth-of-type(3)::before {
+		content: "Toán";
+	}
+	table td:nth-of-type(4)::before {
+		content: "Lý";
+	}
+	table td:nth-of-type(5)::before {
+		content: "Hoá";
+	}
+	table td:nth-of-type(6)::before {
+		content: "Trung Bình";
+	}
+	.calc {
+		margin-bottom: 1rem;
+	}
+}
+
+body {
+	min-width: 300px;
+}
+
+body h1 {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+body form {
+	width: 300px;
+	margin: 2rem auto;
+}
+
+body form div {
+	padding: 4px;
+	margin: 8px 0;
+}
+
+body form div input {
+	float: right;
+}
+
+body form button {
+	width: 64px;
+	height: 24px;
+	background-color: #d33257;
+	border: 1px solid #d2d7d3;
+	border-radius: 12px;
+	margin-top: 24px;
+	margin-bottom: 50px;
+	position: relative;
+	left: calc(50% - 32px);
+}
+
+body table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 2rem auto;
+	width: 90%;
+}
+
+body table tr th {
+	background-color: #f3f3f3;
+}
+
+body table tr > * {
+	border: 1px solid #ccc;
+	padding: 10px;
+	text-align: center;
+}
+
+body .calc {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+body .calc button {
+	width: 200px;
+	height: 32px;
+	margin: 8px;
+	background: #64c4af;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+body .calc button:hover {
+	-webkit-animation: 8s shake infinite;
+	animation: 8s shake infinite;
+	background: red;
+}
+/*# sourceMappingURL=main.css.map */
