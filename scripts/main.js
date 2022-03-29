@@ -98,9 +98,37 @@ $(function () {
 					"Please, you need to calculate average score first and then click this button"
 				);
 			} else {
-				if (Number(average) > 8) {
+				if (Number(average) >= 8) {
 					currentRow.classList.add("great");
 				}
+			}
+		}
+	});
+
+	$(".filter #filer_1").on("click", function () {
+		var rows = Array.from(scoreTable[0].children);
+		for (var i = 0; i < rows.length; i++) {
+			if (rows[i].cells[5].innerText < 8) {
+				rows[i].hidden = true;
+			}
+		}
+	});
+
+	$(".filter #refresh-btn").on("click", function () {
+		var rows = Array.from(scoreTable[0].children);
+		for (var i = 0; i < rows.length; i++) {
+			if (rows[i].hidden) {
+				rows[i].hidden = false;
+			}
+		}
+	});
+
+	$(".delete #delete-btn").on("click", function () {
+		var name = $(".delete #name").val();
+		var rows = Array.from($("#first-body")[0].rows);
+		for (var i = 0; i < rows.length; i++) {
+			if (rows[i].cells[1].innerText === name) {
+				rows[i].remove();
 			}
 		}
 	});

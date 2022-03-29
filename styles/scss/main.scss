@@ -49,6 +49,7 @@ body {
 	.calc {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		button {
 			width: 200px;
 			height: 32px;
@@ -59,6 +60,37 @@ body {
 			&:hover {
 				animation: 8s shake infinite;
 				background: red;
+			}
+		}
+	}
+	.modified {
+		display: flex;
+		flex-direction: row;
+		width: 80%;
+		justify-content: space-evenly;
+		margin: 2rem auto;
+		text-align: center;
+		flex-wrap: wrap;
+		button {
+			width: 200px;
+			height: 32px;
+			margin: 8px;
+			background: #64c4af;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			&:hover {
+				animation: 8s shake infinite;
+				background: red;
+			}
+		}
+		.delete {
+			input {
+				margin: 8px;
+				width: 200px;
+				height: 32px;
+				text-align: center;
+				border: 1px solid #ccc;
+				border-radius: 2px;
 			}
 		}
 	}
